@@ -30,6 +30,11 @@ flow:
           rm -r -f ${IOS_PROJECT_NAME}
           git clone ${FLOW_GIT_URL} ${IOS_PROJECT_NAME}
       
+      - name: npm_install
+        script: |
+          cd ${IOS_PROJECT_NAME}
+          npm install
+
       - name: Run_ios
         script: |
           cd ${IOS_PROJECT_NAME}
